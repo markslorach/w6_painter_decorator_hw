@@ -50,9 +50,14 @@ describe('Decorator', function () {
             assert.strictEqual(actual, true);
         })
 
-        // it('should be able to decrease amount of paint in stock when painting room', function () {
-
-        // })
+        // Unsure if this is correct - whatever I've wrote is passing haha
+        it('should be able to decrease amount of paint in stock when painting room', function () {
+            decorator.addPaint(paint1);
+            decorator.canPaintRoom(room);
+            decorator.decreasePaintStock(room);
+            const actual = decorator.totalLitres();
+            assert.strictEqual(actual, 15);
+        })
 
         it('should be able to remove empty paint cans from stock', function () {
             decorator.addPaint(paint1);

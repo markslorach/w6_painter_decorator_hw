@@ -23,7 +23,10 @@ Decorator.prototype.canPaintRoom = function (room) {
     }
 }
 
-
+// Unsure if this is correct - whatever I've wrote is passing haha
+Decorator.prototype.decreasePaintStock = function (room) {
+    return this.paintStock.forEach(paint => paint.litres -= room.area);    
+}
 
 Decorator.prototype.removeEmptyPaintCans = function () {
     for(paint of this.paintStock) {
